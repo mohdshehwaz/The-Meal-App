@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: teal;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+header .icon{
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+header ol{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0;
+    list-style: none;
+}
+header ol li{
+    margin: 0 2px;
+}
+header ol li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+}
+header ol li:hover a{
+    background: white;
+    color: teal;
+}
+header .search-box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+header .search-box input{
+    border: none;
+    outline: none;
+    background-color: white;
+
+    width: auto;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+
+}
+header .search-box span i{
+    color: teal;
+    font-size: 20px;
+    background: white;
+    height: 100%;
+    padding: 8px;
+    /* position: relative; */
+    cursor: pointer;
+    z-index: 1;
+}
+header .search-box span i:hover{
+    color: white;
+}
+header .search-box span i::after{
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: red;
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+header .search-box span i:hover::after{
+    width: 100%;
+}
+#form-id{
+    display: flex;
+    flex-direction: column;
+
+}
+.list{
+    position: sticky;
+    width: 100%;
+    height: auto;
+    
+}
+/* styles for bars minimize */
+header .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+header .bar i{
+    position: absolute;
+    color: white;
+    font-size: 35px;
+}
+input[type= "checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+}
+/* // main id starts from here */
+#main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    gap: 20px;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+
+    background-color: teal;
+    align-items: center;
+    
+    width: 220px;
+    box-sizing: border-box;
+    box-shadow: 5px lightgray;
+    margin: 10px;
+
+}
+.item img{
+    height: 200px;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 50%;
+    padding: 10px;
+}
+.item p{
+    pointer-events: none;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    
+}
+.item button{
+    width: 120px;
+
+}
+.list-item{
+    height: 35px;
+    width: 100%;
+    background: white;
+}
+.item-btns{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-btns button{
+    width: 100px;
+    color: white;
+    background-color: teal;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.item-btns i{
+    color: brown;
+}
+@media screen and (max-width:650px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+ 
+}
+#single-item{
+    background: #fffde7;
+    display: none;
+}
+#name{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    padding-top: 50px;
+    margin-bottom: 40px;
+    color: grey;
+    font-weight: 800;
+
+}
+#body-div{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 50px;
+}
+
+#body-div h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: black;
+    font-weight: 400;
+}
+#body-div img{
+    height: 400px;
+    width: 400px;
+    box-sizing: border-box;
+    margin: 50px;
+    border: none;
+    border-radius: 10px;
+    width: auto;
+    box-shadow:10px 10px none;
+
+}
+#insta{
+    margin: 50px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: green;
+
+}
+#insta a{
+    margin-top: 40px;
+    padding: 10px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: aqua;
+    text-decoration: none;
+}
+.fa-solid.fa-heart{
+
+    color: rgb(45, 44, 0);
+}
+
+.fa-heart.active {
+    color: brown
+}
+.fa-heart:hover{
+    scale: 1.9;
+    transition: ease-in-out all .25s;
+}
+.fav-class{ 
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    height: auto;
+    width: 250px;
+    background-color:pink;
+    height: 100vh;
+    text-align: center;
+    overflow: scroll;
+}
+.fav-class h4{
+    margin-top: 10px;
+    padding: 10px;
+}
+.fav-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.fav-item{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(247, 89, 89);
+    align-items: center;
+    
+    width: 220px;
+    box-sizing: border-box;
+    box-shadow: 5px lightgray;
+    margin: 10px;
+}
+.fav-item img{
+    height: 200px;
+    pointer-events: none;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 50%;
+    padding: 10px;
+}
+.fav-item-btns{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fav-item-btns button{
+    width: 100px;
+    color: white;
+    background-color: teal;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.fav-item-btns i{
+    color: brown;
+}
+#cross-mark{
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+}
+#cross-mark i{
+    font-size: 25px;
+}
